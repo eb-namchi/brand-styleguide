@@ -1,0 +1,180 @@
+@import "./_variables"
+
+@font-face {
+  font-family: 'BentonSans';
+  font-weight: $light;
+  font-style: normal;
+  src: url('../assets/fonts/BentonSans-Light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'BentonSans';
+  font-weight: $regular;
+  font-style: normal;
+  src: url('../assets/fonts/BentonSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'BentonSans';
+  font-weight: $bold;
+  font-style: normal;
+  src: url('../assets/fonts/BentonSans-Italic.otf') format('opentype');
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+button,
+code,
+ul,
+li,
+input {
+  font-family: 'BentonSans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'BentonSans-Regular', sans-serif;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: $grey-900;
+
+  font-weight: normal;
+}
+
+h1 {
+  font-family: 'BentonSans-Light', sans-serif;
+  
+  font-size: 48px;
+  line-height: 56px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.page-title {
+    margin-top: $page-title-top-margin;
+  }
+}
+
+h2 {
+  font-family: 'BentonSans-Light', sans-serif;
+  
+  font-size: 48px;
+  line-height: 56px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+h3 {
+  font-family: 'BentonSans-Light', sans-serif;
+
+  font-size: 24px;
+  line-height: 28px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+h4 {
+  font-family: 'BentonSans-Light', sans-serif;
+
+  font-size: 24px;
+  line-height: 28px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+h5 {
+  font-family: 'BentonSans-Medium', sans-serif;
+
+  font-size: 11px;
+  line-height: 14px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+h6 {
+  font-family: 'BentonSans-Bold', sans-serif;
+
+  font-size: 12px;
+  line-height: 17px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+}
+
+p {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+
+  color: $gray-600;
+
+  //margin-top: .25em;
+  //margin-bottom: 1em;
+
+  a {
+    color: $gray-600;
+
+    &:hover {
+      color: $gray-500;
+    }
+  }
+}
+
+.small {
+  font-size: $font-size-small;
+  line-height: $line-height-small;
+}
+
+.large {
+  font-size: $font-size-large;
+  line-height: $line-height-large;
+}
+
+.regular {
+  font-weight: $regular;
+}
+
+.bold {
+  font-weight: $bold;
+}
+
+.light {
+  font-weight: $light;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}

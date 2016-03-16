@@ -1,0 +1,73 @@
+// Colors
+//
+$lt-mint: #BEFFE7;
+$mint: #64EEC6;
+$dk-mint: #439A80;
+$lt-aqua: #00FFF9;
+$aqua: #2EC2CA;
+$dk-aqua: #1D7270;
+$lt-blue: #00D9D3;
+$blue: #007F8D;
+$dk-blue: #003C40;
+$lt-orange: #FFA800;
+$orange: #F86820;
+$dk-orange: #C14C1F;
+$white: #fff;
+$black: #000;
+$cream: #F8F5E5;
+$dk-navy: #272B35;
+$white-3percent-opacity: rgba($white; .03);
+$white-5percent-opacity: rgba($white; .05);
+$white-10percent-opacity: rgba($white; .1);
+$white-85percent-opacity: rgba($white; .85);
+$black-5percent-opacity: rgba($black; .05);
+$black-20percent-opacity: rgba($black; .2);
+
+// greys
+//
+$grey-100: #F9F9FB;
+$grey-200: #F0F3F6;
+$grey-300: #D3D7E0;
+$grey-400: #C4C7CF;
+$grey-500: #AEB1B6;
+$grey-600: #666A73;
+$grey-700: #45494E;
+$grey-800: #363A43;
+$grey-900: #282C34;
+
+// Font Sizes
+//
+$font-size-small: 12px;
+$font-size-medium: 14px;
+$font-size-base: 16px;
+$font-size-large: 20px;
+$font-size-xlarge: 24px;
+
+$line-height-large: 1.33;
+$line-height-small: 1.5;
+
+$bold: 600;
+$regular: 400;
+$light: 200;
+
+// Padding
+//
+$padding-small-vertical: 5px;
+$padding-small-horizontal: 10px;
+
+$padding-base-vertical: 6px;
+$padding-base-horizontal: 12px;
+
+$padding-large-vertical: 10px;
+$padding-large-horizontal: 16px;
+
+// Other
+//
+$border-radius-none: 0;
+$border-radius-xsmall: 2px;
+$border-radius-small: 4px;
+$border-radius-base: 8px;
+$border-radius-large: 10px;
+
+$link-fade-time: 0.2;
+$link-fade-time-s: 0.2s;

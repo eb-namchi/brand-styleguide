@@ -60,7 +60,7 @@ We want to keep our pages lightweight. This means that jQuery is our enemy. So l
 
 ### Setup
 
-For the javascript functions, you'll want to selectively choose which which functions you'd like to use. However, do be cautious of copying functions out of their context. A good rule of thumb is to only copy a function where the function declaration is *not* indented. Make sure you copy the entire function!
+For the javascript functions, you'll want to selectively choose which which functions you'd like to use. However, do be cautious of copying functions out of their context. A good rule of thumb is to only copy a function where the function declaration is *not* indented. 
 
 Some functions may have dependencies, all of which are detailed at the top of each file. Most have dependencies on `_helpers.js` which for the most part will be sufficient. To account for these dependencies, make sure you include the dependency file in your project or copy the entire dependency file's contents to the top of your working script.
 
@@ -72,7 +72,7 @@ function myFunction() {
 }
 ```
 
-At the bottom of your script, make sure add this line to call it:
+Make sure you copy the *entire function*! At the bottom of your script, make sure add this line to call it:
 
 ```
 myFunction()
@@ -82,14 +82,41 @@ Save the script and you can now add it to your project. Don't forget to link the
 
 ### JS Files
 
-An explanation of the functions you'll find in each of the JS files.
+An explanation of the functions you'll find in each of the JS files so you can determine which 
+functions to use. 
 
-##### _helpers.js
+##### Helper Functions (_helpers.js)
+
+Likely you won't be actually calling many of the helper functions. This file helps abstract many of the basic functions used by other functions. 
+
+###### handleAnimation(tl)
+Takes paused timeline `tl` and starts animation timeline
+
+###### handleHideAnimation(tl)
+Takes timeline `tl` and reverts to paused start state
+
+###### debounce(func, wait, immediate)
+Debounce a function `func` for a given time `wait`. `immediate` takes values `true` or `false` to determine whether function gets called immediately at first or not.
+
+###### isMobile() 
+Returns `true` if device is Mobile.
 
 ##### _utility.js
 
+Utility functions like modal handling and widow removal.
+
+###### initModal(elm_id, open_id, vid_link)
+Initiates modal with id `elm_id` upon click of elm with id `open_id`. Ensure that your HTML has a modal element with class `modal` and child element with class `modal__container`. Optional video within the modal container, which if you'd like to have a link, add vid_link as an argument.
+
+###### removeWidows(target_class)
+Removes widows in all elements with class `target_class`.
+
 ##### _scroll.js
 
+For a snapping scroll experience, use the scroll script in this file.
+
+###### initScroll(total, start, animationTl) 
+Navigation snap scrolling for a total X number of slides. Starts navigation at slide number `start`. Slides must have ID `slide_0` to `slide_X`. This script accounts for mobile swiping, keydown, and mouse scroll. Optionally, add `animationTl` Animation Timeline to trigger animations upon scroll. In that case, make sure you build your animation timeline!
 
 
 

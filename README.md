@@ -115,7 +115,8 @@ Removes widows in all elements with class `target_class`.
 
 For a snapping scroll experience, use the scroll script in this file.
 
-* ###### initScroll(total, start, animationTl) 
+* ###### initScroll(total, start, animationTl)
+
 Navigation snap scrolling for a total X number of slides. Starts navigation at slide number `start`. Slides must have ID `slide_0` to `slide_X`. This script accounts for mobile swiping, keydown, and mouse scroll. Optionally, add `animationTl` Animation Timeline to trigger animations upon scroll. In that case, make sure you build your animation timeline!
 
 

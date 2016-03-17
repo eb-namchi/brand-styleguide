@@ -10,7 +10,6 @@ function slideNext() {
 			handleHideAnimation(anim_prev); 
 		}, 500);
 		handleNavTracker(current);
-		console.log('handle' + current);
 		handleReturnCards(current-1);
 	}
 }

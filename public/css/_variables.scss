@@ -16,14 +16,14 @@ $white: #fff;
 $black: #000;
 $cream: #F8F5E5;
 $dk-navy: #272B35;
-$white-3percent-opacity: rgba($white; .03);
-$white-5percent-opacity: rgba($white; .05);
-$white-10percent-opacity: rgba($white; .1);
-$white-85percent-opacity: rgba($white; .85);
-$black-5percent-opacity: rgba($black; .05);
-$black-20percent-opacity: rgba($black; .2);
+$white-3percent-opacity: rgba($white, .03);
+$white-5percent-opacity: rgba($white, .05);
+$white-10percent-opacity: rgba($white, .1);
+$white-85percent-opacity: rgba($white, .85);
+$black-5percent-opacity: rgba($black, .05);
+$black-20percent-opacity: rgba($black, .2);
 
-// greys
+// Greys
 //
 $grey-100: #F9F9FB;
 $grey-200: #F0F3F6;
@@ -46,6 +46,10 @@ $font-size-xlarge: 24px;
 $line-height-large: 1.33;
 $line-height-small: 1.5;
 
+$line-height-small: 16px;
+$line-height-base: 24px;
+$line-height-large: 32px;
+
 $bold: 600;
 $regular: 400;
 $light: 200;
@@ -60,6 +64,8 @@ $padding-base-horizontal: 12px;
 
 $padding-large-vertical: 10px;
 $padding-large-horizontal: 16px;
+
+$page-title-top-margin: 40px;
 
 // Other
 //

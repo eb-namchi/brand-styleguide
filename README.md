@@ -8,7 +8,7 @@ The Styleguide is made to be a tool to allow you to quickly customize CSS and JS
 
 Our Styleguide allows you to easily select standardized CSS classes you would like to include and easily inject them into your project. Styles are built in [SCSS] (http://sass-lang.com/) and may be found in the folder `public/css/`. Once you have SCSS installed, you'll be able to cherry pick from our pre-built SCSS files and generate your own CSS files.
 
-#### Setup SCSS
+### Setup SCSS
 
 Download [SCSS] (http://sass-lang.com/install). If you have Ruby, running `sudo gem install sass` should do the trick, else first install [Ruby] (https://www.ruby-lang.org/en/documentation/installation/).
 
@@ -58,7 +58,7 @@ If you open this file, you'll see that there isn't any SCSS! It literally just i
 
 We want to keep our pages lightweight. This means that jQuery is our enemy. So let's write some vanilla JS!
 
-### Setup
+### JS Setup
 
 For the javascript functions, you'll want to selectively choose which functions you'd like to use. Once you find those, determine which script files they live in and make sure to include those scripts.
 

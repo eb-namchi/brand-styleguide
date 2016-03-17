@@ -45,3 +45,36 @@ button:focus, {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
+.modal {
+  position:fixed;
+  top:0;
+  left:0;
+  width: $screen-full-width;
+  height: $screen-full-height;
+  transition: opacity 0.3s linear;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 99999;
+}
+
+.modal__container {
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 20px #000;
+  overflow: hidden;
+}
+
+.modal--hide {
+  z-index: -1;
+  box-shadow: none;
+  opacity:0;
+}

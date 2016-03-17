@@ -1,6 +1,6 @@
 # Brand Styleguide
 
-Welcome to the Brand Styleguide! This is a collection of CSS classes and JS functions that will hopefully help everyone build faster, more standardized landing pages. We're constantly refining the styleguide to be up to best web standards of practice. If you would like to make a change or addition to the styleguide, please create a new branch, push your changes, and submit a pull request. Brand Comm will evaluate the change and merge the request if the change makes sense the the grand scheme of the styleguide.
+Welcome to the Brand Styleguide! This is a collection of CSS classes and JS functions that will hopefully help everyone build faster, more standardized landing pages. We're constantly refining the styleguide to be up to best web standards of practice. If you would like to make a change or addition to the styleguide, please create a new branch, push your changes, and submit a pull request. Brand Comm will evaluate the change and merge the request if the change makes sense in the grand scheme of the styleguide.
 
 The Styleguide is made to be a tool to allow you to quickly customize CSS and JS to add to your project. It's built to be flexible to your needs and light to be highly efficient and performant. It's also built to help others learn about our components and why we make the stylistic decisions we do.
 
@@ -10,7 +10,7 @@ Our Styleguide allows you to easily select standardized CSS classes you would li
 
 #### Setup SCSS
 
-Download SCSS from [here] (http://sass-lang.com/install). If you have Ruby, running `sudo gem install sass` should do the trick, else first install [Ruby] (https://www.ruby-lang.org/en/documentation/installation/).
+Download [SCSS] (http://sass-lang.com/install). If you have Ruby, running `sudo gem install sass` should do the trick, else first install [Ruby] (https://www.ruby-lang.org/en/documentation/installation/).
 
 Go into the folder `public/css/`. Here you'll find many SCSS files. Browse through the classes, and when you're ready to start your own, create a file inside this folder called `localstyle.scss`. Now type this import at the beginning of the file:
 
@@ -20,7 +20,7 @@ Go into the folder `public/css/`. Here you'll find many SCSS files. Browse throu
 
 This import line will include all the variable dependencies as well as resets, typography, and general boilerplate classes. Now, if you would like to include other files, simply add another line of `@import /path/of/file` to add that SCSS file. Otherwise, if you'd like to cherry pick, from here on out, you can copy paste specific classes from the pre-built SCSS classes or write your own.
 
-Importantly, you're now able to use the variables defined in `_variables.scss`. To use a variable: `$variable-name`.
+Importantly, you're now able to use the variables defined in `_variables.scss`. To use a variable, type `$variable-name` where you would typically type the value for the style attribute.
 
 After you're satisfied with your classes, you're ready to convert to CSS! Go to the css folder in your Terminal. Now run:
 
@@ -28,7 +28,7 @@ After you're satisfied with your classes, you're ready to convert to CSS! Go to 
 sass localstyle.scss localstyle.css
 ```
 
-Now you have a `localstyle.css` file! Drag this file into your project, include it as a link in your HTML and you're all set!
+Now you have a `localstyle.css` file! Drag this file into your project, include it as a link in your HTML and you're all set! This is how generally how you'd generate your css files. 
 
 ### SCSS Files
 
@@ -52,7 +52,50 @@ If you'd like to use our flexbox grid, include this file. The grid system is sim
 
 ##### _styles-all.scss
 
-If you open this file, you'll see that there isn't any SCSS! It literally just imports all the SCSS files we have and aggregates them into one. This makes it easy to simply compile this file and get our entire SCSS styleguide in a nice package. `styles-all.css` is simply the built version of _styles-all.scss. Currently used for the styleguide portfolio.
+If you open this file, you'll see that there isn't any SCSS! It literally just imports all the SCSS files we have and aggregates them into one. This makes it easy to simply compile this file and get our entire SCSS styleguide in a nice package. `styles-all.css` is simply the built version of _styles-all.scss. Currently used for the styleguide portfolio. If you're lazy, feel free to drag this css file directly into your project to get all the pre-built classes!
 
 ##How to use JS Files
+
+We want to keep our pages lightweight. This means that jQuery is our enemy. So let's write some vanilla JS!
+
+### Setup
+
+For the javascript functions, you'll want to selectively choose which which functions you'd like to use. However, do be cautious of copying functions out of their context. A good rule of thumb is to only copy a function where the function declaration is *not* indented. Make sure you copy the entire function!
+
+Some functions may have dependencies, all of which are detailed at the top of each file. Most have dependencies on `_helpers.js` which for the most part will be sufficient. To account for these dependencies, make sure you include the dependency file in your project or copy the entire dependency file's contents to the top of your working script.
+
+Create a new script file. Copy each of the functions you would like to use into your new script file. At the bottom of your file, make sure to call each function. That is, for each function you would like to use that looks like: 
+
+```
+function myFunction() {
+	...
+}
+```
+
+At the bottom of your script, make sure add this line to call it:
+
+```
+myFunction()
+```
+
+Save the script and you can now add it to your project. Don't forget to link the script in your HTML file!
+
+### JS Files
+
+An explanation of the functions you'll find in each of the JS files.
+
+##### _helpers.js
+
+##### _utility.js
+
+##### _scroll.js
+
+
+
+
+
+
+
+
+
 

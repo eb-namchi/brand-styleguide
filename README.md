@@ -60,11 +60,11 @@ We want to keep our pages lightweight. This means that jQuery is our enemy. So l
 
 ### Setup
 
-For the javascript functions, you'll want to selectively choose which which functions you'd like to use. However, do be cautious of copying functions out of their context. A good rule of thumb is to only copy a function where the function declaration is *not* indented. 
+For the javascript functions, you'll want to selectively choose which functions you'd like to use. Once you find those, determine which script files they live in and make sure to include those scripts.
 
-Some functions may have dependencies, all of which are detailed at the top of each file. Most have dependencies on `_helpers.js` which for the most part will be sufficient. To account for these dependencies, make sure you include the dependency file in your project or copy the entire dependency file's contents to the top of your working script.
+Some functions may have dependencies, all of which are detailed at the top of each file. Most have dependencies on `_helpers.js` which for the most part will be sufficient. To account for these dependencies, make sure you include the dependency file in your project.
 
-Create a new script file. Copy each of the functions you would like to use into your new script file. At the bottom of your file, make sure to call each function. That is, for each function you would like to use that looks like: 
+After copying the necessary JS files into your project and adding them to your HTML accordingly, create a new script file and add it to your HTML below the dependencies. Now in your script, make sure to call each function you would like to use. That is, for each function you would like to use that looks like: 
 
 ```
 function myFunction() {
@@ -72,18 +72,17 @@ function myFunction() {
 }
 ```
 
-Make sure you copy the *entire function*! At the bottom of your script, make sure add this line to call it:
+In your script, make sure add this line to call it:
 
 ```
 myFunction()
 ```
 
-Save the script and you can now add it to your project. Don't forget to link the script in your HTML file!
+Save and don't forget to link the script in your HTML file!
 
 ### JS Files
 
-An explanation of the functions you'll find in each of the JS files so you can determine which 
-functions to use. 
+An explanation of the functions you'll find in each of the JS files so you can determine which functions to use. All available functions are listed here. Other functions you see in the scripts may be nested or private and so not callable. 
 
 ##### Helper Functions (_helpers.js)
 

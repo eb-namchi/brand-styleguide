@@ -89,33 +89,33 @@ functions to use.
 
 Likely you won't be actually calling many of the helper functions. This file helps abstract many of the basic functions used by other functions. 
 
-###### handleAnimation(tl)
+* ###### handleAnimation(tl)
 Takes paused timeline `tl` and starts animation timeline
 
-###### handleHideAnimation(tl)
+* ###### handleHideAnimation(tl)
 Takes timeline `tl` and reverts to paused start state
 
-###### debounce(func, wait, immediate)
+* ###### debounce(func, wait, immediate)
 Debounce a function `func` for a given time `wait`. `immediate` takes values `true` or `false` to determine whether function gets called immediately at first or not.
 
-###### isMobile() 
+* ###### isMobile() 
 Returns `true` if device is Mobile.
 
-##### _utility.js
+##### Utility Functions (_utility.js)
 
 Utility functions like modal handling and widow removal.
 
-###### initModal(elm_id, open_id, vid_link)
+* ###### initModal(elm_id, open_id, vid_link)
 Initiates modal with id `elm_id` upon click of elm with id `open_id`. Ensure that your HTML has a modal element with class `modal` and child element with class `modal__container`. Optional video within the modal container, which if you'd like to have a link, add vid_link as an argument.
 
-###### removeWidows(target_class)
+* ###### removeWidows(target_class)
 Removes widows in all elements with class `target_class`.
 
-##### _scroll.js
+##### Scroll Navigation (_scroll.js)
 
 For a snapping scroll experience, use the scroll script in this file.
 
-###### initScroll(total, start, animationTl) 
+* ###### initScroll(total, start, animationTl) 
 Navigation snap scrolling for a total X number of slides. Starts navigation at slide number `start`. Slides must have ID `slide_0` to `slide_X`. This script accounts for mobile swiping, keydown, and mouse scroll. Optionally, add `animationTl` Animation Timeline to trigger animations upon scroll. In that case, make sure you build your animation timeline!
 
 

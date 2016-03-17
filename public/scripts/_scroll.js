@@ -1,5 +1,5 @@
 //--------------------------------------------------------------
-// Scrolling Navigation Functions
+// Scroll Navigation Functions
 //
 // Requires: _helpers.js
 //--------------------------------------------------------------

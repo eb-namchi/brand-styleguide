@@ -1,6 +1,8 @@
 # Brand Styleguide
 
-Welcome to the Brand Styleguide!
+Welcome to the Brand Styleguide! This is a collection of CSS classes and JS functions that will hopefully help everyone build faster, more standardized landing pages. We're constantly refining the styleguide to be up to best web standards of practice. If you would like to make a change or addition to the styleguide, please create a new branch, push your changes, and submit a pull request. Brand Comm will evaluate the change and merge the request if the change makes sense the the grand scheme of the styleguide.
+
+The Styleguide is made to be a tool to allow you to quickly customize CSS and JS to add to your project. It's built to be flexible to your needs and light to be highly efficient and performant. It's also built to help others learn about our components and why we make the stylistic decisions we do.
 
 ##How to use CSS Styles
 

@@ -62,7 +62,7 @@ We want to keep our pages lightweight. This means that jQuery is our enemy. So l
 
 For the javascript functions, you'll want to selectively choose which functions you'd like to use. Once you find those, determine which script files they live in and make sure to include those scripts.
 
-Some functions may have dependencies, all of which are detailed at the top of each file. Most have dependencies on `_helpers.js` which for the most part will be sufficient. To account for these dependencies, make sure you include the dependency file in your project.
+Some functions may have dependencies, all of which are detailed at the top of each file. Most have dependencies on `_helpers.js` which for the most part will be sufficient. To account for these dependencies, make sure you include the dependency file in your project. Some will have vendor dependencies, so if it's not working, check your dependencies!
 
 After copying the necessary JS files into your project and adding them to your HTML accordingly, create a new script file and add it to your HTML below the dependencies. Now in your script, make sure to call each function you would like to use. That is, for each function you would like to use that looks like: 
 
@@ -114,8 +114,38 @@ Removes widows in all elements with class `target_class`.
 
 For a snapping scroll experience, use the scroll script in this file.
 
-* initScroll(total, start, animationTl)
+* ###### initScroll(total, start, animationTl)
 Navigation snap scrolling for a total X number of slides. Starts navigation at slide number `start`. Slides must have ID `slide_0` to `slide_X`. This script accounts for mobile swiping, keydown, and mouse scroll. Optionally, add `animationTl` Animation Timeline to trigger animations upon scroll. In that case, make sure you build your animation timeline!
+Requires Vendor Dependency: smooth-scroll.min.js
+
+##### Animation (gsap.js)
+
+Animations can be created as single instances (single tween) or as a series of animations (timeline) triggered by some event. 
+
+* ###### Tween
+For an animation, you'll need the element `elm` you want to animate, the duration `duration` and define the attributes you'd like to animate. The syntax looks as below.
+```
+TweenLite.from(elm, duration, {attribute: value, attribute: value, ...})
+```
+```
+TweenLite.to(elm, duration, {attribute: value, attribute: value, ...})
+```
+Tween `.from` determines which attributes you'd like the element to animate from. Tween `.to` determines which attributes you'd like the element to animate to.
+All CSS attributes may be used (with JS attribute names). Ease may also be defined as an attribute. 
+
+* ###### Timeline
+Similarly to the Tween, you'll want to define your elements and parameters, but this time, instead of one statement, you'll string them together so they happen in sequence one after the other.
+```
+var timeline = new TimelineMax();
+
+timeline.from(elm, duration, {attribute: value, attribute: value, ...})
+.from(elm, duration, {attribute: value, attribute: value, ...})
+.to(elm, duration, {attribute: value, attribute: value, ...})
+...
+```
+Add whichever tweens you'd like and you're all set! Importantly, you'll define the timeline as a variable. This gives you control over it, so you can use it with initScroll. Or simply use it with the `handleAnimation()` and `handleHideAnimation()` helper functions.
+
+That's it for now! Ping me if there are bugs, as not everything is perfect yet! gl;hf
 
 
 

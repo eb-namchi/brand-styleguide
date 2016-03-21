@@ -42,7 +42,6 @@ function initModal(elm_id, open_id, vid_link) {
 	blackout.addEventListener('click', handleModalClose);
 }
 
-
 // Removes widows in all elements with class "target_class"
 // NB: all arguments are strings
 //

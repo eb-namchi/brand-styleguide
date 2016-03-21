@@ -114,13 +114,13 @@ Removes widows in all elements with class `target_class`.
 
 For a snapping scroll experience, use the scroll script in this file.
 
-* ###### initScroll(total, start, animationTl)
+###### initScroll(total, start, animationTl)
 Navigation snap scrolling for a total X number of slides. Starts navigation at slide number `start`. Slides must have ID `slide_0` to `slide_X`. This script accounts for mobile swiping, keydown, and mouse scroll. Optionally, add `animationTl` Animation Timeline to trigger animations upon scroll. In that case, make sure you build your animation timeline!
 Requires Vendor Dependency: smooth-scroll.min.js
 
 ##### Animation (gsap.js)
 
-Animations can be created as single instances (single tween) or as a series of animations (timeline) triggered by some event. 
+Animations can be created as single instances (single tween) or as a series of animations (timeline) triggered by some event. For further gsap docs, check out [Greensock] (http://greensock.com/gsap).
 
 * ###### Tween
 For an animation, you'll need the element `elm` you want to animate, the duration `duration` and define the attributes you'd like to animate. The syntax looks as below.
@@ -145,7 +145,7 @@ timeline.from(elm, duration, {attribute: value, attribute: value, ...})
 ```
 Add whichever tweens you'd like and you're all set! Importantly, you'll define the timeline as a variable. This gives you control over it, so you can use it with initScroll. Or simply use it with the `handleAnimation()` and `handleHideAnimation()` helper functions.
 
-That's it for now! Ping me if there are bugs, as not everything is perfect yet! gl;hf
+That's it for now! Ping Jessica Ma if there are bugs, as not everything is perfect yet! gl;hf
 
 
 

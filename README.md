@@ -114,7 +114,7 @@ Removes widows in all elements with class `target_class`.
 
 For a snapping scroll experience, use the scroll script in this file.
 
-###### initScroll(total, start, animationTl)
++ ###### initScroll(total, start, animationTl)
 Navigation snap scrolling for a total X number of slides. Starts navigation at slide number `start`. Slides must have ID `slide_0` to `slide_X`. This script accounts for mobile swiping, keydown, and mouse scroll. Optionally, add `animationTl` Animation Timeline to trigger animations upon scroll. In that case, make sure you build your animation timeline!
 Requires Vendor Dependency: smooth-scroll.min.js
 
@@ -122,7 +122,7 @@ Requires Vendor Dependency: smooth-scroll.min.js
 
 Animations can be created as single instances (single tween) or as a series of animations (timeline) triggered by some event. For further gsap docs, check out [Greensock] (http://greensock.com/gsap).
 
-###### Tween
++ ###### Tween
 For an animation, you'll need the element `elm` you want to animate, the duration `duration` and define the attributes you'd like to animate. The syntax looks as below.
 ```
 TweenLite.from(elm, duration, {attribute: value, attribute: value, ...})
@@ -133,7 +133,7 @@ TweenLite.to(elm, duration, {attribute: value, attribute: value, ...})
 Tween `.from` determines which attributes you'd like the element to animate from. Tween `.to` determines which attributes you'd like the element to animate to.
 All CSS attributes may be used (with JS attribute names). Ease may also be defined as an attribute. 
 
-###### Timeline
++ ###### Timeline
 Similarly to the Tween, you'll want to define your elements and parameters, but this time, instead of one statement, you'll string them together so they happen in sequence one after the other.
 ```
 var timeline = new TimelineMax();

@@ -4,7 +4,689 @@ Welcome to the Brand Styleguide! This is a collection of CSS classes and JS func
 
 The Styleguide is made to be a tool to allow you to quickly customize CSS and JS to add to your project. It's built to be flexible to your needs and light to be highly efficient and performant. It's also built to help others learn about our components and why we make the stylistic decisions we do.
 
-##How to use CSS Styles
+## How to use Atomic Structure
+
+The atomic structure is based off modules (atoms, molecules, containers) that you can put together and build into a page. To directly use the atomic structure, you'll only need the file `atoms.css`. If you would like to make changes to the modules or add modules, see the below subsections on running SCSS to 
+
+### Concepts
+
+Atomic Structure is made to be very composable. Everything in atomic design is made up of atoms. These atoms go on to make up molecules. Molecules can go inside molecules. For layout purposes, we can then put atoms and molecules within containers to constrain them to a certain width. We can then put these containers within containers or within molecules...! The possibilities are endless. See the [Brandbook Docs] (https://github.com/eventbrite/brandbook) for a more thorough explanation.
+
+To build a page with the Atomic Structure, simply copy paste the atoms, molecules, and containers into an HTML file that has the `atoms.css` file linked. That is, add this line into your HTML:
+
+`<link rel="stylesheet" href="https://aws.wherethefilelives" />`
+
+If linking is not an option, or if you have a customized `atoms.scss` file, you can also copy and paste the entire `atoms.css` file into your HTML file between `<style>` tags.
+
+### Module Portfolio
+
+The file `mastermodules.html` includes the modules in aggregate. It's a nice visual where you can pick out modules you'd like to use. Also good example of how simple modules are built. 
+
+### HTML Structure Reference Guide
+
+The structure of all the modules is laid out here. Copy, paste, test, knock yourself out. These are structures of modules used in the Brandbook. Feel free to use these directly or as reference to create your own molecules as well by putting these atoms, molecules, and/or containers together. 
+
+All the modules in the Reference Guide are optimized for scaling. If you create your own, watch out for scaling quirks and edge cases.
+
+Everything is a Module. So where it says, INSERT MODULE or INFINITE MODULES, you can nest literally anything. Remember though that there's no limit to the composability of these modules -- nest away!
+
+#### Atoms
+
+Atoms are simple in that you cannot define modules within atoms. But be weary of using atoms directly, since they don't have padding/margins. 
+
+```html
+<h1 class="atom--head">
+	AtomHead
+</h1>
+```
+```html
+<h1 class="atom--subhead">
+	AtomSubhead
+</h1>
+```
+```html
+<p class="atom--quote">
+	AtomQuote
+</p>
+```
+```html
+<p class="atom--body">
+	AtomBody
+</p>
+```
+```html
+<p class="atom--body atom--body--bold">
+	AtomBodyBold
+</p>
+```
+```html
+<p class="atom--body atom--body--upper">
+	AtomBodyUpper
+</p>
+```
+```html
+<p class="atom--body atom--body--bold atom--body--upper">
+	AtomBodyBoldUpper
+</p>
+```
+```html
+<p class="atom--caption">
+	AtomCaption
+</p>
+```
+```html
+<hr class="atom--hr">
+</hr>
+```
+```html
+<hr class="atom--hr atom--hr--white">
+</hr>
+```
+```html
+<hr class="atom--hr atom--hr--dotted">
+</hr>
+```
+```html
+<div class="atom--icon">
+	<img src="images/example.png" />
+</div>
+```
+```html
+<p class="atom--hero">
+	AtomHero
+</p>
+```
+```html
+<img class="atom--img" />
+```
+```html
+<div class="atom--button">
+	AtomButton
+</div>
+```
+
+#### Molecules
+
+Molecules have padding and prescribed arrangement of atoms.
+
+Note: The `...` indicate you can add an infinite pieces of content in series. So you could list a hundred things and it would generate all of them elegantly.
+
+```html
+<div className="molecule--head">
+	<h1 class="atom--head">
+		MoleculeHead
+	</h1>
+	...
+</div>
+```
+```html
+<div className="molecule--bodies">
+	<p class="atom--body">
+	</p>
+	...
+</div>
+```
+```html
+<div className="molecule--quotes">
+	<p class="atom--quote">
+	</p>
+	...
+</div>
+```
+```html
+<div className="molecule--duo container--flex">
+	<div className="container--45">
+		INSERT MODULE
+	</div>
+	<div className="container--45">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--duo container--flex">
+	<div className="container--60">
+		INSERT MODULE
+	</div>
+	<div className="container--35">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--duo molecule--duo--skew--reverse container--flex">
+	<div className="container--30">
+		INSERT MODULE
+	</div>
+	<div className="container--65">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--duo molecule--duo--skew--reverse container--flex">
+	<div className="container--45">
+		INSERT MODULE
+	</div>
+	<div className="container--50">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--duo container--flex molecule--terminal">
+	<div className="container--30">
+		INSERT MODULE
+	</div>
+	<div className="container--65">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--duo molecule--duo--constant container--flex">
+	<div className="container--45">
+		INSERT MODULE
+	</div>
+	<div className="container--45">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--duo container--flex molecule--triple ">
+	<div className="container container--30">
+		INSERT MODULE
+	</div>
+	<div className="container container--30">
+		INSERT MODULE
+	</div>
+	<div className="container container--30">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--duo molecule--quad container--flex">
+	<div className="container container--24">
+		INSERT MODULE
+	</div>
+	<div className="container container--24">
+		INSERT MODULE
+	</div>
+	<div className="container container--24">
+		INSERT MODULE
+	</div>
+	<div className="container container--24">
+		INSERT MODULE
+	</div>
+</div>
+```
+```html
+<div className="molecule--range-dotted">
+	<hr className="atom--hr atom--hr--dotted">
+	</hr>
+	<div className="container--flex">
+		<div className="molecule--addition">
+			<p class="atom--body atom--body--bold">
+				AtomBody
+			</p>
+			<p class="atom--body">
+				AtomBody
+			</p>
+		</div>
+		<div className="molecule--addition align-right">
+			<p class="atom--body atom--body--bold">
+				AtomBody
+			</p>
+			<p class="atom--body">
+				AtomBody
+			</p>
+		</div>
+	</div>
+</div>
+```
+```html
+<div className="molecule--trait container--flex">
+	<div className="container container--50">
+		<h1 className="atom--head">
+			AtomHead
+		</h1>
+	</div>
+	<div className="container container--40">
+		<div className="atom--hr atom--hr--light">
+		</div>
+		<p className="atom--body">
+			AtomBody
+		</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--term container container--flex">
+	<div className="container--65">
+		<h1 className="atom--head">
+			AtomHead
+		</h1>
+		<p className="atom--body">
+			AtomBody
+		</p>
+	</div>
+	<div className="container--35">
+		<div className="atom--hr atom--hr--light">
+		</div>
+		<p className="atom--body">
+			AtomBody
+		</p>
+		<p className="atom--quote">
+			AtomQuote
+		</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--detail container--flex">
+	<div className="container--40">
+		<div className="atom--hr atom--hr--light">
+		</div>
+		<p className="atom--body">
+			AtomBody
+		</p>
+		<p className="atom--body">
+			AtomBody
+		</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--detail--right">
+	<div className="atom--hr atom--hr--light">
+	</div>
+	<p className="atom--caption">
+		AtomCaption
+	</p>
+	<p className="atom--caption">
+		AtomCaption
+	</p>
+</div>
+```
+```html
+<div className="molecule--quote">
+	<div className="container--20">
+		<div className="atom--hr atom--hr--light">
+		</div>
+	</div>
+	<p className="atom--body atom--body--bold">
+		AtomBodyBold
+	</p>
+	<p className="atom--body color-grey-300">
+		AtomBody
+	</p>
+	<div className="container container--100">
+		<p className="atom--body">
+			- AtomBody
+		</p>
+		<p className="atom--body">
+			- AtomBody
+		</p>
+		<p className="atom--body">
+			- AtomBody
+		</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--pull-quote">
+	<div className="container container--100">
+		<p className="atom--quote">
+			AtomQuote
+		</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--section container container--flex">
+	<div className="container--20">
+		<div className="atom--hr atom--hr--light">
+		</div>
+		<p className="atom--body">
+			AtomBody
+		</p>
+	</div>
+	<div className="container--75">
+		<p className="atom--quote">
+			AtomQuote
+		</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--desc">
+	<div className="atom--hr atom--hr--light">
+	</div>
+	INSERT MODULES
+</div>
+```
+```html
+<div className="molecule--icon container--flex">
+	<div className="container--icon">
+		<div className="atom--icon">
+			<img src="images/example.png"/>
+		</div>
+	</div>
+	<div className="container--wrap">
+	<p className="atom--caption">
+		AtomCaption
+	</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--parent">
+	<div className="atom--quote">
+		AtomQuote
+	</div>
+	<div className="atom--quote">
+		AtomQuote
+	</div>
+</div>
+```
+```html
+<div className="molecule--bottom">
+	<div className="container container--40">
+		<div className="container--10">
+			<div className="atom--hr atom--hr--light">
+			</div>
+		</div>
+		<p className="atom--body">
+			AtomBody
+		</p>
+	</div>
+</div>
+```
+```html
+<div className="molecule--side">
+	<div className="container container--100">
+		<div className="atom--hr atom--hr--light">
+		</div>
+		<p className="atom--body">
+			AtomBody
+		</p>
+		...
+	</div>
+</div>
+```
+```html
+<div className="molecule--footer">
+	<div className="container container--80">
+		<div className="atom--hr atom--hr--light">
+		</div>
+		<p className="atom--body">
+			AtomBody
+		</p>
+		...
+	</div>
+</div>
+```
+```html
+<div className="molecule--addition">
+	<p className="atom--body">
+		AtomBodyBold
+	</p>
+	<p className="atom--body">
+		AtomBody
+	</p>
+	...
+</div>
+```
+```html
+<div className="molecule--addition align-right">
+	<p className="atom--body atom--body--bold">
+		AtomBodyBold
+	</p>
+	<p className="atom--body">
+		AtomBody
+	</p>
+</div>
+```
+```html
+<!-- Adjust container--XX for different sizing -->
+<div className="molecule--img align-center container--100" >
+	<img className="atom--img" src="images/example.png" />
+</div>
+```
+```html
+<div className="molecule--img container--100">
+	<img className="atom--img" src="images/example.png" />
+</div>
+<div className="molecule--img">
+	<img className="atom--img" src="images/example.png" />
+	<div className="molecule--icon container--flex">
+		<div className="container--icon">
+			<div className="atom--icon">
+				<img src="images/example.png"/>
+			</div>
+		</div>
+		<div className="container--wrap">
+		<p className="atom--caption">
+			AtomCaption
+		</p>
+		</div>
+	</div>
+</div>
+```
+```html
+<div className="molecule--subhead-detail">
+	<p className="atom--body">
+		AtomBody
+	</p>
+	<h2 className="atom--subhead">
+		AtomSubhead
+	</h2>
+</div>
+```
+```html
+<div className="molecule--second-head">
+	<h2 className="atom--subhead">
+		AtomSubhead
+	</h2>
+</div>
+```
+```html
+<div className="molecule--subheads">
+	<h1 className="atom--subhead">
+		AtomSubhead
+	</h1> 
+	<h1 className="atom--subhead">
+		AtomSubhead
+	</h1> 
+</div>
+```
+```html
+<div className="molecule--subhead-quote">
+	<img src="images/example.png" />
+	<h1 className="atom--subhead">
+		AtomSubhead
+	</h1> 
+</div>
+```
+```html
+<a href="URL-SOURCE" target="__blank">
+	<div className="molecule--button">
+		<div class="atom--button">
+			AtomButton
+		</div>
+	</div>
+</a>
+```
+
+#### Containers
+
+Containers enclose these modules. All modules can nest within containers, including containers. They have nice padding/margins. Where you see `{...}` is where you would write in modules.
+
+If you want a container of any particular width, call the class `container--XX` where XX represents width XX% you want for that container.
+
+```html
+<div class="container--skin">
+	ContainerSkin has no margin/padding. Helpful for packaging
+</div>
+```
+```html
+<div class="container--flex">
+	ContainerFlex will flex the elements within. Make sure their widths add to 100%
+</div>
+```
+```html
+<div class="container--main container--100">
+	ContainerMain has default gutters.
+</div>
+```
+```html
+<div class="container--narrow container--100">
+	ContainerNarrow has narrow gutters.
+</div>
+```
+```html
+<div class="container--thin container--100">
+	ContainerThin has thin gutters.
+</div>
+```
+```html
+<div class="container--squeeze">
+	ContainerSqueeze will reduce margin/padding for elements within.
+</div>
+```
+```html
+<div class="container--100">
+	Container--XX will render you a container with width XX%.
+</div>
+```
+```html
+<div class="container--bkgd container--main container--100" style="background-image: url(images/bkgd-example.png)" >
+	ContainerBkgd allows you to have content on top of an image.
+</div>
+```
+
+#### One-off CSS Classes
+
+Of course, the modules don't cover absolutely everything. Here are a few one-off classes that have been helpful. Simply add them to the element's class list and the styles will appear. 
+
+```
+color-grey-300 // text color 
+```
+```
+color-grey-600 // text color 
+```
+```
+color-grey-900 // text color 
+```
+```
+color-white // text color 
+```
+```
+gradient-text // text color 
+```
+```
+padding-top // extra padding top
+```
+```
+color-sunrise-500 // text color 
+```
+```
+color-deepsea-500 // text color 
+```
+```
+color-surf-500 // text color 
+```
+```
+bkgd-sunrise-500 // bkgd color
+```
+```
+bkgd-deepsea-500 // bkgd color
+```
+```
+bkgd-aloe-500 // bkgd color
+```
+```
+bkgd-surf-500 // bkgd color
+```
+```
+bkgd-gradient-orange // bkgd color
+```
+```
+bkgd-gradient-green // bkgd color
+```
+```
+bkgd-gradient-blue // bkgd color
+```
+```
+bkgd-gradient-pink // bkgd color
+```
+```
+bkgd-secondary-purple // bkgd color
+```
+```
+bkgd-secondary-pink // bkgd color
+```
+```
+bkgd-secondary-yellow // bkgd color
+```
+```
+font-medium // made font bold
+```
+
+### Changing Atomic Variables (_variables.scss)
+
+At times you'll need to change the variables like color, font-size, etc that govern the entire structure. All the variables are found in the `_variables.scss` file. Open this file, make the changes to the variables. Save. Now in Terminal, you'll run Sass to make all your changes flow through into the `atoms.css` file. 
+
+Assuming you have SASS installed (see How to use CSS section for details). In Terminal, navigate into `brand-styleguide/public/css`. Now run:
+```
+sass atoms.scss atoms.css
+```
+This command tells SASS to transcribe your `atoms.scss` into `atoms.css`. Since `atoms.scss` calls upon `_variables.scss`, your changes will permeate through.
+
+More on SASS in the How to use CSS section of this guide.
+
+### Updating the Style of Modules (atoms.scss)
+
+To update the CSS classes of modules, open up `atoms.scss` and find the class you want to manipulate. Change it to your liking. 
+
+Note the nested structure of some molecules. This defines nested modules for specific parent modules. For example:
+```css
+.EXAMPLE-MOLECULE {
+	.EXAMPLE-ATOM {
+		// some changes
+	}
+}
+```
+The changes defined in the nested `EXAMPLE-ATOM` class will only be reflected in the atom when it is in that particular `EXAMPLE-MOLECULE`. This is how we can control specific styling within modules.
+
+Note: Always always always use the variables defined. No magic numbers. If you need to, define variables at the top.
+
+#### Dependencies: `_variables.scss`, `_boilerplate.scss`, `_typography.scss`
+
+Make sure the dependencies are inside your folder before you run 
+```
+sass atoms.scss atoms.css
+```
+To have your changes permeate into `atoms.css`.
+
+Tip: If you're making a ton of changes and testing in real-time, run 
+```
+sass --watch atoms.scss:atoms.css
+```
+to have SASS live update your `atoms.css` file.
+
+### Adding Modules (atoms.scss)
+
+Similar to updating the style of modules, you'll add a class and update the `mastermolecules.html` and also this `README.md` to include your new module. New one-off styles can be added and also updated in the `README.md`.
+
+### Updating the Master Atomic Structure
+
+1. Push to Github (see brandbook for commands)
+2. Update the AWS `atoms.css` file
+
+## How to use CSS Styles
 
 Our Styleguide allows you to easily select standardized CSS classes you would like to include and easily inject them into your project. Styles are built in [SCSS] (http://sass-lang.com/) and may be found in the folder `public/css/`. Once you have SCSS installed, you'll be able to cherry pick from our pre-built SCSS files and generate your own CSS files.
 
@@ -53,6 +735,10 @@ If you'd like to use our flexbox grid, include this file. The grid system is sim
 ##### _styles-all.scss
 
 If you open this file, you'll see that there isn't any SCSS! It literally just imports all the SCSS files we have and aggregates them into one. This makes it easy to simply compile this file and get our entire SCSS styleguide in a nice package. `styles-all.css` is simply the built version of _styles-all.scss. Currently used for the styleguide portfolio. If you're lazy, feel free to drag this css file directly into your project to get all the pre-built classes!
+
+##### atoms.scss
+
+This is the SCSS file for the atoms. Refer to the section on How to Use Atomic Structure.
 
 ##How to use JS Files
 

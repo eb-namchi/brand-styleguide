@@ -1,4 +1,3 @@
-@import './_variables';
 @import './_typography.scss';
 
 * {
@@ -6,21 +5,18 @@
   padding: 0;
   box-sizing: border-box;
   position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 html, body {
   -webkit-tap-highlight-color: transparent;
+  font-family: 'BentonSans', sans-serif;
 }
 
 img {
-  max-width: 100%;
+  //max-width: 100%;
 }
 
 hr {
-  margin-top: 30px;
-  margin-bottom: 30px;
   border-top-color: $grey-100;
 }
 
@@ -36,45 +32,4 @@ button:hover,
 button:active,
 button:focus, {
   outline: none;
-}
-
-.vertical-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.modal {
-  position:fixed;
-  top:0;
-  left:0;
-  width: $screen-full-width;
-  height: $screen-full-height;
-  transition: opacity 0.3s linear;
-  -webkit-transition: opacity 0.3s linear;
-  -moz-transition: opacity 0.3s linear;
-  -o-transition: opacity 0.3s linear;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 99999;
-}
-
-.modal__container {
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  box-shadow: 1px 1px 20px #000;
-  overflow: hidden;
-}
-
-.modal--hide {
-  z-index: -1;
-  box-shadow: none;
-  opacity:0;
 }

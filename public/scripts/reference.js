@@ -39,6 +39,11 @@ btn.onClick = function() {
 }
 
 
+scrollevent = function() {
+	TweenMax.from(block, 0.3, {opacity: 0});
+}
+
+
 
 
 

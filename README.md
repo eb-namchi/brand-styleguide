@@ -364,7 +364,10 @@ Note: The `...` indicate you can add an infinite pieces of content in series. So
 <div className="molecule--desc">
 	<div className="atom--hr atom--hr--light">
 	</div>
-	INSERT MODULES
+	<p className="atom--body">
+		AtomBody
+	</p>
+	...
 </div>
 ```
 ```html
@@ -383,7 +386,7 @@ Note: The `...` indicate you can add an infinite pieces of content in series. So
 ```
 ```html
 <div className="molecule--parent">
-	<div className="atom--quote">
+	<div className="atom--quote color-grey-300">
 		AtomQuote
 	</div>
 	<div className="atom--quote">
@@ -634,6 +637,12 @@ bkgd-secondary-yellow // bkgd color
 ```
 font-medium // made font bold
 ```
+```
+align-center // align text center
+```
+```
+align-right // align text center
+```
 
 ### Changing Atomic Variables (_variables.scss)
 
@@ -663,7 +672,7 @@ The changes defined in the nested `EXAMPLE-ATOM` class will only be reflected in
 
 Note: Always always always use the variables defined. No magic numbers. If you need to, define variables at the top.
 
-#### Dependencies: `_variables.scss`, `_boilerplate.scss`, `_typography.scss`
+##### Dependencies: `_variables.scss`, `_boilerplate.scss`, `_typography.scss`
 
 Make sure the dependencies are inside your folder before you run 
 ```

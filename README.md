@@ -14,7 +14,7 @@ Atomic Structure is made to be very composable. Everything in atomic design is m
 
 To build a page with the Atomic Structure, simply copy paste the atoms, molecules, and containers into an HTML file that has the `atoms.css` file linked. That is, add this line into your HTML:
 
-`<link rel="stylesheet" href="https://aws.wherethefilelives" />`
+`<link rel="stylesheet" href="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/atomic-design/atoms.css" />`
 
 If linking is not an option, or if you have a customized `atoms.scss` file, you can also copy and paste the entire `atoms.css` file into your HTML file between `<style>` tags.
 
